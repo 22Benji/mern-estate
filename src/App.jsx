@@ -5,10 +5,13 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Profile from './pages/Profile';
 import React from 'react';
+import Header from './components/Header';
 
 export default function App() {
   return (
   <BrowserRouter>
+  <Header /> 
+  {/* we need the above header to show on all pages */}
     <Routes>
       <Route path='/' element={<Home />} />
       {/* <Route path="*" element={<p>Path not resolved</p>} /> */}
