@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import OAuth from '../components/OAuth';
 
 
 
@@ -50,6 +51,7 @@ const handleSubmit = async (e) => {
         < input type='email' placeholder='email' id='email' className=' border p-3 rounded-2xl' onChange={handleChange}/>
         < input type='password' placeholder='password' id='password' className=' border p-3 rounded-2xl' onChange={handleChange}/>
         <button disabled={loading} className=' bg-slate-700 text-white p-3 rounded-3xl uppercase hover:opacity-90 disabled:opacity-70'>{loading ? 'Loading...' : 'Sign Up'}</button>
+        <OAuth />
       </form>
       <div className=' flex gap-2 mt-3'>
         <p>Have an account?</p>

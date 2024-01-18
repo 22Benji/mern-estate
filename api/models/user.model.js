@@ -11,10 +11,14 @@ const userSchema = new mongoose.Schema({
               },
     password: { type: String, 
                 required: true,
-              }
-    
-              
-}, { timestamps: true});
+              },
+    avatar: {
+          type: String,
+          default: "https://image.pngaaa.com/569/2189569-middle.png"
+    },   
+                 
+}, 
+{ timestamps: true});
 
 const User = mongoose.model('User', userSchema);
 export default User;
